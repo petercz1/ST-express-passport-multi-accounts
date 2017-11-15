@@ -1,0 +1,23 @@
+<!-- FACEBOOK INFORMATION -->
+<div class="col-sm-6">
+    <div class="well">
+       <h3 class="text-primary">
+          <span class="fa fa-facebook"></span> Facebook
+       </h3>
+
+        <% if (user.facebook.token) { %>
+        
+            <p>id:    <%= user.facebook.id %></p>
+            <p>token: <%= user.facebook.token %></p>
+            <p>email: <%= user.facebook.email %></p>
+            <p>name:  <%= user.facebook.name %></p>
+
+            <a href="/unlink/facebook" class="btn btn-primary">Unlink</a>
+
+        <% } else { %>
+
+            <a href="/connect/facebook" class="btn btn-primary">Connect Facebook</a>
+            
+        <% } %>
+    </div>
+ </div>

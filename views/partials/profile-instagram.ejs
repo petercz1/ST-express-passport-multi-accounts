@@ -1,0 +1,23 @@
+<!-- instagram INFORMATION -->
+<div class="col-sm-6">
+    <div class="well">
+       <h3 class="text-primary">
+          <span class="fa fa-instagram"></span> instagram
+       </h3>
+
+        <% if (user.instagram.token) { %>
+        
+            <p>id:    <%= user.instagram.id %></p>
+            <p>token: <%= user.instagram.token %></p>
+            <p>email: <%= user.instagram.displayName %></p>
+            <p>name:  <%= user.instagram.username %></p>
+
+            <a href="/unlink/instagram" class="btn btn-primary">Unlink</a>
+
+        <% } else { %>
+
+            <a href="/connect/instagram" class="btn btn-primary">Connect instagram</a>
+            
+        <% } %>
+    </div>
+ </div>

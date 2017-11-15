@@ -1,0 +1,24 @@
+<!-- GOOGLE INFORMATION -->
+<div class="col-sm-6">
+    <div class="well">
+       <h3 class="text-danger">
+          <span class="fa fa-google-plus"></span> Google
+       </h3>
+
+        <% if (user.google.token) { %>
+        
+            <p>id:        <%= user.google.id %></p>
+            <p>token:     <%= user.google.token %></p>
+            <p>email:     <%= user.google.email %></p>
+            <p>name:      <%= user.google.name %></p>
+
+            <a href="/unlink/google" class="btn btn-danger">Unlink</a>
+
+        <% } else { %>
+
+            <a href="/connect/google" class="btn btn-danger">Connect Google</a>
+
+         <% } %>
+
+    </div>
+ </div>
